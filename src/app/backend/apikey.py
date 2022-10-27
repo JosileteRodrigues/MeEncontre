@@ -1,0 +1,1 @@
+ME_ENCONTRE_GOOGLE_API_KEY = 'AIzaSyCPp86aj-CnjekZm7b8_m-qjif2YxKbYRo'
