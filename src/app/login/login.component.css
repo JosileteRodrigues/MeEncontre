@@ -1,0 +1,23 @@
+.mat-card-simples{
+  max-width: 300px;
+  background-color: #ffe5f0;
+  margin-top: 10px;
+}
+
+.card-insercao-usuario{
+  max-width: 650px;
+  background-color: #ffe5f0;;
+  margin-top: 10px;
+}
+
+.mat-form-simples {
+  margin-left:5px;
+  cursor:text;
+}
+button{
+  margin-bottom: 20px;
+  background-color: #ffe5f0;
+  border-radius: 15px;
+
+}
+

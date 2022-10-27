@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-content class="card-container">
+    <mat-form-field appearance="fill" class="mat-form-simples">
+      <mat-label>Escolha o Estado</mat-label>
+      <mat-select [(ngModel)]="local.estado" (selectionChange)="takeCity()">
+        <mat-option [value]="null" value="-1" disabled class="first-option-item">Estados</mat-option>
+        <mat-option *ngFor="let state of states" [value]="state.nome">{{state.nome}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="mat-form-simples">
+      <mat-label>Escolha a Cidade</mat-label>
+      <mat-select [(ngModel)]="local.cidade">
+        <mat-option [value]="null" value="-1" disabled class="first-option-item"
+          >Cidades</mat-option
+        >
+        <mat-option *ngFor="let city of citys" [value]="city.nome">{{
+          city.nome
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="input">
+      <mat-label>O que você procura?</mat-label>
+      <input matInput [(ngModel)]="local.item" />
+    </mat-form-field>
+    <button mat-raised-button (click)="localSearch()">Buscar</button>
+  </mat-card-content>
+</mat-card>
+
+<br />
+
+<div class="places">
+    <mat-card *ngFor="let local of listCitys">  
+      <p>Nome: {{local.nome}}</p>
+      <p>Endereço: {{local.endereco}}</p>
+      <p>Avaliação: {{local.rating}}</p>
+    </mat-card> 
+</div>
